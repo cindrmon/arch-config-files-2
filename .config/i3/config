@@ -1,0 +1,397 @@
+# ========================================================================================================
+# ========================================================================================================
+# == 													==
+# ==       ___           ___           ___           ___                       ___     			==
+# ==      /\  \         /\  \         /\__\         /\  \          ___        /\  \    			==
+# ==     /::\  \       /::\  \       /::|  |       /::\  \        /\  \      /::\  \   			==
+# ==    /:/\:\  \     /:/\:\  \     /:|:|  |      /:/\:\  \       \:\  \    /:/\:\  \  			==
+# ==   /:/  \:\  \   /:/  \:\  \   /:/|:|  |__   /::\~\:\  \      /::\__\  /:/  \:\  \ 			==
+# ==  /:/__/ \:\__\ /:/__/ \:\__\ /:/ |:| /\__\ /:/\:\ \:\__\  __/:/\/__/ /:/__/_\:\__\			==
+# ==  \:\  \  \/__/ \:\  \ /:/  / \/__|:|/:/  / \/__\:\ \/__/ /\/:/  /    \:\  /\ \/__/			==
+# ==   \:\  \        \:\  /:/  /      |:/:/  /       \:\__\   \::/__/      \:\ \:\__\  			==
+# ==    \:\  \        \:\/:/  /       |::/  /         \/__/    \:\__\       \:\/:/  /  			==
+# ==     \:\__\        \::/  /        /:/  /                    \/__/        \::/  /   			==
+# ==      \/__/         \/__/         \/__/                                   \/__/    			==
+# ==													==
+# ==													==
+# ==													==
+# ==													==
+# ==													==
+# ==       ___           ___           ___           ___           ___                   ___    	==
+# ==      /\  \         /\__\         /\  \         /\  \         /\__\      ___        /\  \    	==
+# ==     /::\  \       /:/  /        /::\  \       /::\  \       /:/  /     /\  \      /::\  \   	==
+# ==    /:/\:\  \     /:/__/        /:/\:\  \     /:/\:\  \     /:/  /      \:\  \    /:/\:\  \  	==
+# ==   /:/  \:\  \   /::\  \ ___   /::\~\:\  \   /::\~\:\  \   /:/  /       /::\__\  /::\~\:\  \ 	==
+# ==  /:/__/ \:\__\ /:/\:\  /\__\ /:/\:\ \:\__\ /:/\:\ \:\__\ /:/__/     __/:/\/__/ /:/\:\ \:\__\	==
+# ==  \:\  \  \/__/ \/__\:\/:/  / \/__\:\/:/  / \/_|::\/:/  / \:\  \    /\/:/  /    \:\~\:\ \/__/	==
+# ==   \:\  \            \::/  /       \::/  /     |:|::/  /   \:\  \   \::/__/      \:\ \:\__\  	==
+# ==    \:\  \           /:/  /        /:/  /      |:|\/__/     \:\  \   \:\__\       \:\ \/__/  	==
+# ==     \:\__\         /:/  /        /:/  /       |:|  |        \:\__\   \/__/        \:\__\    	==
+# ==      \/__/         \/__/         \/__/         \|__|         \/__/                 \/__/    	==
+# ==													==
+# ==													==
+# ========================================================================================================
+# ========================================================================================================
+
+########################################################################
+########################################################################
+
+# Officially Modified i3 config designed for my convenience.
+# Switching completely to bend through my own will and such.
+# No more complicated jargon from the generated config file.
+# Recreated from the original generated config, with slight adjustments.
+# ASCII art and colored intellicode best viewed in a vim editor.
+
+########################################################################
+##  000. Main Mod button  ##############################################
+########################################################################
+
+set $mod Mod4
+
+########################################################################
+########################################################################
+
+########################################################################
+##  001. Font for window Titles  #######################################
+########################################################################
+
+font pango: Ubuntu 10
+
+########################################################################
+########################################################################
+
+########################################################################
+##  002. Important Keybinds  ###########################################
+########################################################################
+
+####  a. Config File Manipulation  #####################################
+
+## reloading config file
+bindsym $mod+Shift+c reload
+
+## restart i3 in place
+bindsym $mod+Shift+r restart
+
+## logout from i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to logout to i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+########################################################################
+########################################################################
+
+########################################################################
+##  003. Personal Keybinds  ############################################
+########################################################################
+
+####  a. Terminal  ##################################################### 
+## bindsym $mod+Return exec cool-retro-term
+bindsym $mod+Return exec konsole 
+
+####  b. Explorer  #####################################################
+## bindsym $mod+e exec thunar
+## bindsym $mod+e exec nemo
+bindsym $mod+e exec dolphin
+
+####  c. Kill Window  ##################################################
+bindsym $mod+Shift+q kill
+
+####  d. Lock Screen  ##################################################
+bindsym $mod+Shift+x exec i3lock --color "#111111" && systemctl suspend 
+
+####  e. Program Launcher  #############################################
+bindsym $mod+d exec rofi -show run
+
+####  f. Screenshot with scrot  ########################################
+bindsym --release $mod+shift+a exec scrot -m ~/Pictures/Screenshots/Screenshot_%b%d::%H%M%S.png    
+bindsym --release $mod+shift+s exec scrot -s ~/Pictures/Snapshots/Snapshot_%b%d::%H%M%S.png
+
+########################################################################
+########################################################################
+
+########################################################################
+##  004. Window Movement  ##############################################
+########################################################################
+
+####  a. Mouse Dragging  ###############################################
+floating_modifier $mod
+
+####  b. Change Focus  #################################################
+
+# VIM binding movement
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Arrow Key Binding Movement
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Tiling/Floating Windows
+bindsym $mod+space focus mode_toggle
+
+# Parent/Child Containers
+bindsym $mod+z focus parent
+bindsym $mod+x focus child
+
+####  c. Move Focused Window  ##########################################
+
+# VIM Binding Movement
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Arrow Key Binding Movement
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+####  d. Splitting (H)orizontally/(V)ertically  ########################
+
+bindsym $mod+g split h
+bindsym $mod+b split v
+
+####  e. Fullscreen Mode  ##############################################
+
+bindsym $mod+f fullscreen toggle
+
+####  f. Change Container Layout (Stacking, Tabbed, Toggle Split)  #####
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+q layout toggle split
+
+####  g. Tiling  #######################################################
+
+bindsym $mod+Shift+space floating toggle
+
+####  h. Resizing Windows  #############################################
+
+mode "resize" {
+
+		## VIM Resizing Keys
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        ## Arrow Resizing Keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        ## back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+########################################################################
+########################################################################
+
+########################################################################
+##  005. Workspaces  ###################################################
+########################################################################
+
+####  a. Mapping Workspaces  ###########################################
+
+## Variable Assignment
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+## Switch to Workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+## Move Focused Container to Workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+####  b. Assigning Workspaces  #########################################
+
+## Workspace Monitor Binding
+# set $s1 DVI-I-0
+# set $m1 HDMI-0
+
+## Workspace Monitor Assignments
+
+	## Monitor 1 (DVI-I-0)
+	# workspace $ws1 output $s1
+	# workspace $ws2 output $s1
+	# workspace $ws3 output $s1
+	# workspace $ws4 output $s1
+	# workspace $ws5 output $s1
+
+	## Monitor 2 (HDMI-0)
+	# workspace $ws6 output $m1
+	# workspace $ws7 output $m1
+	# workspace $ws8 output $m1
+	# workspace $ws9 output $m1
+	# workspace $ws10 output $m1
+
+## Program Assignments
+
+	## ---------------- MONITOR 1 ----------------
+		## ws1 -> Social Media
+		assign [class="discord"] $ws1
+		assign [class="IGdm"] $ws1
+
+		## ws2 -> Terminal
+		assign [class="konsole"] $ws2
+		assign [class="cool-retro-term"] $ws2
+		assign [class="URxvt"] $ws2
+
+		## ws3 -> Pavucontrol+Keepass
+		assign [class="Pavucontrol"] $ws3
+		assign [class="KeePassXC"] $ws3
+		assign [class="KeePass2"] $ws3
+
+		## ws4 -> System Monitors/Free
+		assign [class="deepin-system-monitor"] $ws4
+		assign [class="Gnome-system-monitor"] $ws4
+		assign [class="MEGAsync"] $ws4
+
+		## ws5 -> Torrenting
+		assign [class="Transmission-gtk"] $ws5
+		assign [class="qBittorrent"] $ws5
+
+	## ---------------- MONITOR 2 ----------------
+		## ws6 -> Browsers
+		assign [class="Firefox"] $ws6
+		assign [class="Brave-browser"] $ws6
+
+		## ws7 -> Coding
+		assign [class="Code"] $ws7
+		assign [class="code=oss"] $ws7
+		assign [class="Subl"] $ws7
+		assign [class="Atom"] $ws7
+
+		## ws8 -> Games
+		assign [class="retroarch"] $ws8
+		assign [class="Lutris"] $ws8
+		assign [class="Steam"] $ws8
+
+		## ws9 -> Music
+		assign [class="spotify"] $ws9
+
+		## ws10 -> A/V Production/Free
+		assign [class="resolve"] $ws10
+		assign [class="kdenlive"] $ws10
+		assign [class="Ghb"] $ws10
+		assign [class="Audacity"] $ws10
+
+## Auto StartUp Programs
+
+exec cool-retro-term
+exec discord
+exec firefox
+exec megasync
+
+exec_always pavucontrol
+
+########################################################################
+########################################################################
+
+
+########################################################################
+##  006. Customization  ################################################
+########################################################################
+
+####  a. i3Gaps  #######################################################
+
+# gaps inner 10
+# gaps outer 5
+## smart_gaps on
+
+####  b. i3bar  ########################################################
+
+ bar {
+	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
+	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
+	 colors {
+		background $bg-color
+	    	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	 }
+}
+
+####  c. polybar  ######################################################
+
+# exec polybar example &
+
+####  d. window/bg colors  #############################################
+
+set $bg-color 	         #000000
+set $inactive-bg-color   #2f343f
+set $text-color          #FFFFFE
+set $inactive-text-color #FFFFFF
+set $urgent-bg-color     #FFA500
+
+# window colors
+#                       border              	background         	text                 	indicator
+client.focused          $bg-color           	$bg-color          	$text-color          	#00ff00
+client.unfocused        $inactive-bg-color 	$inactive-bg-color  	$inactive-text-color 	#00ff00
+client.focused_inactive $inactive-bg-color 	$inactive-bg-color  	$inactive-text-color 	#00ff00
+client.urgent           $urgent-bg-color    	$urgent-bg-color   	$text-color          	#00ff00
+
+########################################################################
+########################################################################
+
+########################################################################
+##  007. Miscellaneous  ################################################
+########################################################################
+
+####  a. Wallpaper  ####################################################
+exec_always feh --bg-scale $HOME/Pictures/BG.jpg
+
+####  b. Transparency (Requires Compton)  ##############################
+exec_always compton -f
+
+####  c. Dual Monitor Setup  ###########################################
+## exec xrandr --output DVI-I-0 --mode 1366x768 --pos 0x156 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output DVI-D-0 --off  
+
+####  d. Audio  ########################################################
+## exec pacmd set-card-profile 0 output:hdmi-stereo
+
+####  e. Albert  #######################################################
+## exec albert
+
+########################################################################
+########################################################################
+
+#########################################################################
+###########################  NOTHING FOLLOWS  ###########################
+#########################################################################
