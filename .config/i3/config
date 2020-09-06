@@ -84,13 +84,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to logout to i3?
 ########################################################################
 
 ####  a. Terminal  ##################################################### 
-## bindsym $mod+Return exec cool-retro-term
-bindsym $mod+Return exec konsole 
+bindsym $mod+Return exec cool-retro-term
+## bindsym $mod+Return exec konsole 
 
 ####  b. Explorer  #####################################################
-## bindsym $mod+e exec thunar
+bindsym $mod+e exec thunar
 ## bindsym $mod+e exec nemo
-bindsym $mod+e exec dolphin
+## bindsym $mod+e exec dolphin
 
 ####  c. Kill Window  ##################################################
 bindsym $mod+Shift+q kill
@@ -329,28 +329,28 @@ exec_always pavucontrol
 
 ####  a. i3Gaps  #######################################################
 
-# gaps inner 10
-# gaps outer 5
+gaps inner 10
+gaps outer 5
 ## smart_gaps on
 
 ####  b. i3bar  ########################################################
 
- bar {
-	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
-	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
-	 colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	 }
-}
+# bar {
+#	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
+#	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
+#	 colors {
+#		background $bg-color
+#	    	separator #757575
+#		#                  border             background         text
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	 }
+# }
 
 ####  c. polybar  ######################################################
 
-# exec polybar example &
+exec polybar example &
 
 ####  d. window/bg colors  #############################################
 
