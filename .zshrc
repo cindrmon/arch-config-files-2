@@ -80,10 +80,11 @@ source $ZSH/oh-my-zsh.sh
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/MEGAsync/PROJECTS/GO
+export GOBIN="$GOPATH/bin"
 
 # Custom PATH variable stuff
 
-export PATH=:$PATH:/home/cinder/BinaryPrograms/ookla-speedtest-1.0.0-x86_64-linux:$GOPATH/bin:$GOROOT/bin
+export PATH=:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

@@ -55,7 +55,8 @@ set $mod Mod4
 ##  001. Font for window Titles  #######################################
 ########################################################################
 
-font pango: Ubuntu 10
+# font pango: Ubuntu 10
+font pango: Noto Sans 12
 
 ########################################################################
 ########################################################################
@@ -287,7 +288,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 	## ---------------- MONITOR 2 ----------------
 		## ws6 -> Browsers
-		assign [class="Firefox"] $ws6
+		assign [class="firefox"] $ws6
 		assign [class="Brave-browser"] $ws6
 
 		## ws7 -> Coding
@@ -303,7 +304,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 		assign [class="Steam"] $ws8
 
 		## ws9 -> Music
-		assign [class="spotify"] $ws9
+		assign [class="Spotify"] $ws9
 
 		## ws10 -> A/V Production/Free
 		assign [class="resolve"] $ws10
@@ -315,10 +316,12 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 exec cool-retro-term
 exec discord
-exec firefox
+# exec firefox
 exec megasync
 
 exec_always pavucontrol
+
+exec_always numlockx &
 
 ########################################################################
 ########################################################################
