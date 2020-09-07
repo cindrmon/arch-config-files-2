@@ -292,7 +292,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 		## ws7 -> Coding
 		assign [class="Code"] $ws7
-		assign [class="code=oss"] $ws7
+		assign [class="code-oss"] $ws7
+		assign [class="VSCodium"] $ws7
 		assign [class="Subl"] $ws7
 		assign [class="Atom"] $ws7
 
@@ -335,22 +336,22 @@ gaps outer 5
 
 ####  b. i3bar  ########################################################
 
-# bar {
-#	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
-#	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
-#	 colors {
-#		background $bg-color
-#	    	separator #757575
-#		#                  border             background         text
-#		focused_workspace  $bg-color          $bg-color          $text-color
-#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	 }
-# }
+ bar {
+	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
+	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
+	 colors {
+		background $bg-color
+	    	separator #757575
+	#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	 }
+ }
 
 ####  c. polybar  ######################################################
 
-exec polybar example &
+# exec polybar example &
 
 ####  d. window/bg colors  #############################################
 
@@ -375,7 +376,7 @@ client.urgent           $urgent-bg-color    	$urgent-bg-color   	$text-color    
 ########################################################################
 
 ####  a. Wallpaper  ####################################################
-exec_always feh --bg-scale $HOME/Pictures/BG.jpg
+exec_always feh --bg-scale $HOME/Pictures/BG.png
 
 ####  b. Transparency (Requires Compton)  ##############################
 exec_always compton -f
