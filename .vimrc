@@ -7,26 +7,26 @@ set smartindent
 set nu
 set nowrap
 set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
+" set noswapfile
+" set nobackup
+" set undodir=~/.vim/undodir
+" set undofile
 set incsearch
 set mouse=a
 
-let g:lightline = {
-    \ 'colorscheme': 'seoul256',
-    \ }
+" let g:lightline = {
+"   \ 'colorscheme': 'seoul256',
+"   \ }
 
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 
-    Plug 'preservim/nerdtree' | 
-        \ Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'preservim/nerdcommenter'
-    Plug 'itchyny/lightline.vim'
-    Plug 'terryma/vim-multiple-cursors'
+"    Plug 'preservim/nerdtree' | 
+"        \ Plug 'Xuyuanp/nerdtree-git-plugin'
+"    Plug 'preservim/nerdcommenter'
+"    Plug 'itchyny/lightline.vim'
+"    Plug 'terryma/vim-multiple-cursors'
 
-call plug#end()
+" call plug#end()
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

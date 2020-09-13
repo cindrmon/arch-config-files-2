@@ -78,13 +78,14 @@ source $ZSH/oh-my-zsh.sh
 
 # Go
 
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 export GOPATH=$HOME/MEGAsync/PROJECTS/GO
 export GOBIN="$GOPATH/bin"
 
 # Custom PATH variable stuff
 
 export PATH=:$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH="$PATH:$HOME/Scripts"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -131,9 +132,9 @@ alias \
 	zshconfig="$EDITOR ~/.zshrc"\
 	ohmyzsh="$EDITOR ~/.oh-my-zsh"\
 	\
-	LaunchMCServer='gcloud beta compute ssh --zone "asia-southeast1-c" "mcserver-niflheimr-blue" --project "project-niflheimr-blue"'\
-	LaunchWordpressServer='gcloud beta compute ssh --zone "asia-southeast1-c" "wordpress-1-vm" --project "project-websites-all-over"'\
-	\
+	LaunchMCServer='ssh cindrmon@mcserver2.niflheimr.blue'\
+	LaunchNginxServer='ssh cinder@34.87.155.177'\
+    \
 	i3config="$EDITOR ~/.config/i3/config"\
 	\
 	pleasekillme="poweroff"\
