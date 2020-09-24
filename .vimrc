@@ -4,7 +4,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set nu
+set number relativenumber
 set nowrap
 set smartcase
 " set noswapfile
@@ -13,20 +13,17 @@ set smartcase
 " set undofile
 set incsearch
 set mouse=a
+set wildmode=longest,list,full
 
 " let g:lightline = {
 "   \ 'colorscheme': 'seoul256',
 "   \ }
 
-" call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
+    Plug 'PotatoesMaster/i3-vim-syntax'
+    Plug 'terryma/vim-multiple-cursors'    
+call plug#end()
 
-"    Plug 'preservim/nerdtree' | 
-"        \ Plug 'Xuyuanp/nerdtree-git-plugin'
-"    Plug 'preservim/nerdcommenter'
-"    Plug 'itchyny/lightline.vim'
-"    Plug 'terryma/vim-multiple-cursors'
-
-" call plug#end()
 
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
