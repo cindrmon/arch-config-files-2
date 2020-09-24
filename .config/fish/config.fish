@@ -2,7 +2,7 @@
 # Environment Variables
 
 ## Editor
-set --export EDITOR nvim
+set --export EDITOR vim
 
 ## Go
 
@@ -12,6 +12,7 @@ set --export GOBIN $GOPATH/bin
 
 ## PATH variables
 set -gx PATH $PATH $GOPATH/bin $GOROOT/bin $HOME/Scripts
+set -gx PATH $PATH $HOME/.config/polybar
 
 ## Custom Fish Greeting
 

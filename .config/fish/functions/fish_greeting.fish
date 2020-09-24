@@ -1,4 +1,4 @@
-# Defined in /home/cindermon/.config/fish/config.fish @ line 18
+# Defined in /home/cindermon/.config/fish/config.fish @ line 19
 function fish_greeting
     echo "                  __                                 __            ____ _        __  "
     echo " _      __ ___   / /_____ ____   ____ ___   ___     / /_ ____     / __/(_)_____ / /_ "
