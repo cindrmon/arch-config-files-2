@@ -13,6 +13,7 @@ SETUVAR _fish_abbr_gcheckout:git\x20checkout
 SETUVAR _fish_abbr_gclone:git\x20clone
 SETUVAR _fish_abbr_gcommit:git\x20commit
 SETUVAR _fish_abbr_ginit:git\x20init
+SETUVAR _fish_abbr_gitdotcfg:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_glog:git\x20log
 SETUVAR _fish_abbr_gmerge:git\x20merge
 SETUVAR _fish_abbr_gpull:git\x20pull
