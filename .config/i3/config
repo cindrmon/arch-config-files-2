@@ -273,24 +273,35 @@ bindsym $mod+Mod1+Shift+0 move container to workspace number $ws20
 ####  b. Assigning Workspaces  #########################################
 
 ## Workspace Monitor Binding
-# set $s1 DVI-I-0
-# set $m1 HDMI-0
+set $s1 DVI-I-0
+set $m1 HDMI-0
 
 ## Workspace Monitor Assignments
 
 	## Monitor 1 (DVI-I-0)
-	# workspace $ws1 output $s1
-	# workspace $ws2 output $s1
-	# workspace $ws3 output $s1
-	# workspace $ws4 output $s1
-	# workspace $ws5 output $s1
+	 workspace $ws1 output $s1
+	 workspace $ws2 output $s1
+	 workspace $ws3 output $s1
+	 workspace $ws4 output $s1
+	 workspace $ws5 output $s1
+     workspace $ws6 output $s1
+     workspace $ws7 output $s1
+     workspace $ws8 output $s1
+     workspace $ws9 output $s1
+     workspace $ws10 output $s1
+
 
 	## Monitor 2 (HDMI-0)
-	# workspace $ws6 output $m1
-	# workspace $ws7 output $m1
-	# workspace $ws8 output $m1
-	# workspace $ws9 output $m1
-	# workspace $ws10 output $m1
+	 workspace $ws11 output $m1
+	 workspace $ws12 output $m1
+	 workspace $ws13 output $m1
+	 workspace $ws14 output $m1
+	 workspace $ws15 output $m1
+     workspace $ws16 output $m1
+     workspace $ws17 output $m1
+     workspace $ws18 output $m1
+     workspace $ws19 output $m1
+     workspace $ws20 output $m1
 
 ## Program Assignments
 
@@ -319,32 +330,32 @@ bindsym $mod+Mod1+Shift+0 move container to workspace number $ws20
 		assign [class="qBittorrent"] $ws5
 
 	## ---------------- MONITOR 2 ----------------
-		## ws6 -> Browsers
-		assign [class="firefox"] $ws6
-		assign [class="Brave-browser"] $ws6
+		## ws11 -> Browsers
+		assign [class="firefox"] $ws11
+		assign [class="Brave-browser"] $ws11
 
-		## ws7 -> Coding
-		assign [class="Code"] $ws7
-		assign [class="code-oss"] $ws7
-		assign [class="VSCodium"] $ws7
-		assign [class="Subl"] $ws7
-		assign [class="Atom"] $ws7
-        assign [class="Eclipse"] $ws7
+		## ws12 -> Coding
+		assign [class="Code"] $ws12
+		assign [class="code-oss"] $ws12
+		assign [class="VSCodium"] $ws12
+		assign [class="Subl"] $ws12
+		assign [class="Atom"] $ws12
+        assign [class="Eclipse"] $ws12
 
-		## ws8 -> Games
-		assign [class="retroarch"] $ws8
-		assign [class="Lutris"] $ws8
-		assign [class="Steam"] $ws8
-        assign [class="parsecd"] $ws8
+		## ws13 -> Games
+		assign [class="retroarch"] $ws13
+		assign [class="Lutris"] $ws13
+		assign [class="Steam"] $ws13
+        assign [class="parsecd"] $ws13
 
-		## ws9 -> Music
-		assign [class="Spotify"] $ws9
+		## ws14 -> Music
+		assign [class="Spotify"] $ws14
 
-		## ws10 -> A/V Production/Free
-		assign [class="resolve"] $ws10
-		assign [class="kdenlive"] $ws10
-		assign [class="Ghb"] $ws10
-		assign [class="Audacity"] $ws10
+		## ws15 -> A/V Production/Free
+		assign [class="resolve"] $ws15
+		assign [class="kdenlive"] $ws15
+		assign [class="Ghb"] $ws15
+		assign [class="Audacity"] $ws15
 
 ## Auto StartUp Programs
 
@@ -373,23 +384,23 @@ gaps outer 5
 
 ####  b. i3bar  ########################################################
 
-# bar {
-#	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
-#	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
-#	 colors {
-#		background $bg-color
-#	    	separator #757575
-#	#                  border             background         text
-#		focused_workspace  $bg-color          $bg-color          $text-color
-#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	 }
-# }
+ bar {
+	  status_command i3status -c $HOME/.config/i3status/config.conf
+	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
+	 colors {
+		background $bg-color
+	    	separator #757575
+	#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	 }
+ }
 
 ####  c. polybar  ######################################################
 
 # exec polybar example &
-exec --no-startup-id launch.sh
+# exec --no-startup-id launch.sh
 
 ####  d. window/bg colors  #############################################
 
@@ -420,7 +431,7 @@ exec_always feh --bg-scale $HOME/Pictures/BG.png
 exec_always compton -f
 
 ####  c. Dual Monitor Setup  ###########################################
-## exec xrandr --output DVI-I-0 --mode 1366x768 --pos 0x156 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output DVI-D-0 --off  
+exec xrandr --output DVI-I-0 --mode 1366x768 --pos 0x156 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output DVI-D-0 --off  
 
 ####  d. Audio  ########################################################
 ## exec pacmd set-card-profile 0 output:hdmi-stereo
