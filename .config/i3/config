@@ -383,23 +383,23 @@ gaps outer 5
 
 ####  b. i3bar  ########################################################
 
-# bar {
-#	  status_command i3status # -c /home/ferox/.config/i3status/config.conf
-#	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
-#	 colors {
-#		background $bg-color
-#	    	separator #757575
-#	#                  border             background         text
-#		focused_workspace  $bg-color          $bg-color          $text-color
-#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	 }
-# }
+ bar {
+	  status_command i3status -c $HOME/.config/i3status/config.conf
+	  # status_command i3blocks -c /home/ferox/.config/i3/i3blocks.conf
+	 colors {
+		background $bg-color
+	    	separator #757575
+	#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	 }
+ }
 
 ####  c. polybar  ######################################################
 
 # exec polybar example &
-exec --no-startup-id launch.sh
+# exec --no-startup-id launch.sh
 
 ####  d. window/bg colors  #############################################
 
