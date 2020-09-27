@@ -107,6 +107,7 @@ bindsym $mod+d exec rofi -show run
 ####  f. Screenshot with scrot  ########################################
 bindsym --release $mod+shift+a exec scrot -m ~/Pictures/Screenshots/Screenshot_%b%d::%H%M%S.png    
 bindsym --release $mod+shift+s exec scrot -s ~/Pictures/Snapshots/Snapshot_%b%d::%H%M%S.png
+bindsym --release $mod+shift+m exec scrot --focused ~/Pictures/Snapshots/Focused_Snapshot_%b%d::%H%M%S.png
 
 ########################################################################
 ########################################################################
