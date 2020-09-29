@@ -330,6 +330,9 @@ set $m1 HDMI-0
 		assign [class="Transmission-gtk"] $ws5
 		assign [class="qBittorrent"] $ws5
 
+        ## ws6 -> Browsers/LBRY
+        assign [class="LBRY"] $ws6
+
 	## ---------------- MONITOR 2 ----------------
 		## ws11 -> Browsers
 		assign [class="firefox"] $ws11
