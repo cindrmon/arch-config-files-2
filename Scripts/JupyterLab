@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd ~/MEGAsync/PROJECTS/PYTHON/JupyterNotebooks
+jupyter lab
