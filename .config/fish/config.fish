@@ -12,7 +12,7 @@ set --export GOBIN $GOPATH/bin
 
 ## PATH variables
 set -gx PATH $PATH $GOPATH/bin $GOROOT/bin $HOME/Scripts
-set -gx PATH $PATH $HOME/.config/polybar
+set -gx PATH $PATH $HOME/BinaryPrograms/OpenRGB/
 
 ## Custom Fish Greeting
 

@@ -10,6 +10,7 @@ SETUVAR _fish_abbr_dotbranch:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitR
 SETUVAR _fish_abbr_dotcheckout:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20checkout
 SETUVAR _fish_abbr_dotclone:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20clone
 SETUVAR _fish_abbr_dotcommit:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20commit
+SETUVAR _fish_abbr_dotdiff:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20diff
 SETUVAR _fish_abbr_dotgit:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_dotinit:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20init
 SETUVAR _fish_abbr_dotlog:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/GitRepos/Github_Main/Bare/arch\x2dconfig\x2dfiles\x2d2/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20log
