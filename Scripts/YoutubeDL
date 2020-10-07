@@ -25,7 +25,7 @@ elif(choice == "3"):
     FinalCmd = 'youtube-dl ' + Flags + URL
 
 elif (choice == "4"):
-    Flags = '-f bestvideo+bestaudio -o "' + Loc + '/$(title)s.%(ext)s" '
+    Flags = '-f bestvideo+bestaudio -o "' + Loc + '/%(title)s.%(ext)s" '
     FinalCmd = 'youtube-dl ' + Flags + URL
 
 os.system(FinalCmd)
