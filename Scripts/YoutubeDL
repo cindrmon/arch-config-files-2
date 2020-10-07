@@ -1,1 +1,32 @@
-#!/bin/sh
+#!/usr/bin/python
+import os
+
+print("Simple YoutubeDL!")
+URL = input("Enter Youtube URL: ")
+Loc = input("Enter Location to save: ")
+print()
+print("Enter choice:")
+print("(1): Download Audio Only (mp3)")
+print("(2): Download Video (mp4)")
+print("(3): Download Best Audio Quality Only (mp3)")
+print("(4): Download Best Video Quality (mkv, mp4, webm)")
+choice = input("> ")
+
+if(choice == "1"):
+    Flags = '-x --audio-format mp3 -o "' + Loc + '/%(title)s.%(ext)s" '
+    FinalCmd = 'youtube-dl ' + Flags + URL
+
+elif(choice == "2"):
+    Flags = '--format mp4 -o "' + Loc + '/%(title)s.%(ext)s" '
+    FinalCmd = 'youtube-dl ' + Flags + URL
+
+elif(choice == "3"):
+    Flags = '-x --audio-format mp3 -f bestaudio -o "' + Loc + '/%(title)s.%(ext)s" '
+    FinalCmd = 'youtube-dl ' + Flags + URL
+
+elif (choice == "4"):
+    Flags = '-f bestvideo+bestaudio -o "' + Loc + '/$(title)s.%(ext)s" '
+    FinalCmd = 'youtube-dl ' + Flags + URL
+
+os.system(FinalCmd)
+
