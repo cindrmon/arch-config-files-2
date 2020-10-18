@@ -435,7 +435,7 @@ exec_always feh --bg-scale $HOME/Pictures/BG.png
 exec_always compton -f
 
 ####  c. Dual Monitor Setup  ###########################################
-exec xrandr --output DVI-I-0 --mode 1366x768 --pos 0x156 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output DVI-D-0 --off  
+exec xrandr --output DVI-I-0 --mode 1440x900 --pos 0x90 --rotate normal --output DVI-I-1 --off --output DP-0 --off --output DP-1 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1440x0 --rotate normal --output DVI-D-0 --off
 
 ####  d. Audio  ########################################################
 ## exec pacmd set-card-profile 0 output:hdmi-stereo
