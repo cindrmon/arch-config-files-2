@@ -315,6 +315,7 @@ set $m1 HDMI-0
 		assign [class="konsole"] $ws2
 		assign [class="cool-retro-term"] $ws2
 		assign [class="URxvt"] $ws2
+        assign [class="eDEX-UI"] $ws2
 
 		## ws3 -> Pavucontrol+Keepass
 		assign [class="Pavucontrol"] $ws3
@@ -363,10 +364,11 @@ set $m1 HDMI-0
 
 ## Auto StartUp Programs
 
-exec cool-retro-term
+# exec cool-retro-term
 exec discord
 # exec firefox
 exec megasync
+exec edex-ui
 
 exec_always pavucontrol
 
@@ -429,7 +431,7 @@ client.urgent           $urgent-bg-color    	$urgent-bg-color   	$text-color    
 ########################################################################
 
 ####  a. Wallpaper  ####################################################
-exec_always feh --bg-scale $HOME/Pictures/BG.png
+exec_always feh --bg-scale $HOME/Pictures/BG.jpg
 
 ####  b. Transparency (Requires Compton)  ##############################
 exec_always compton -f

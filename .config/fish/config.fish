@@ -7,12 +7,15 @@ set --export EDITOR vim
 ## Go
 
 set --export GOROOT /usr/lib/go
-set --export GOPATH $HOME/MEGAsync/PROJECTS/GO
+set --export GOPATH $HOME/MEGASync/PROJECTS/GO
 set --export GOBIN $GOPATH/bin
 
 ## PATH variables
+# Scripts
 set -gx PATH $PATH $GOPATH/bin $GOROOT/bin $HOME/Scripts
+# Binary Programs
 set -gx PATH $PATH $HOME/BinaryPrograms/OpenRGB/
+set -gx PATH $PATH $HOME/BinaryPrograms/Gophie/
 
 ## Custom Fish Greeting
 
