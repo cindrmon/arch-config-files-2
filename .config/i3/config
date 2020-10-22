@@ -307,17 +307,18 @@ set $m1 HDMI-0
 ## Program Assignments
 
 	## ---------------- MONITOR 1 ----------------
-		## ws1 -> Social Media
-		assign [class="discord"] $ws1
-		assign [class="IGdm"] $ws1
+	
+		## ws1 -> Terminal
+		assign [class="konsole"] $ws1
+		assign [class="cool-retro-term"] $ws1
+		assign [class="URxvt"] $ws1
+        assign [class="eDEX-UI"] $ws1
 
-		## ws2 -> Terminal
-		assign [class="konsole"] $ws2
-		assign [class="cool-retro-term"] $ws2
-		assign [class="URxvt"] $ws2
-        assign [class="eDEX-UI"] $ws2
-
-		## ws3 -> Pavucontrol+Keepass
+    	## ws2 -> Social Media
+		assign [class="discord"] $ws2
+		assign [class="IGdm"] $ws2
+	
+    ## ws3 -> Pavucontrol+Keepass
 		assign [class="Pavucontrol"] $ws3
 		assign [class="KeePassXC"] $ws3
 		assign [class="KeePass2"] $ws3
