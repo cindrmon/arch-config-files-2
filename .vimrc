@@ -20,10 +20,10 @@ set wildmode=longest,list,full
 "   \ 'colorscheme': 'seoul256',
 "   \ }
 
-call plug#begin('~/.vim/plugged')
-    Plug 'PotatoesMaster/i3-vim-syntax'
-    Plug 'terryma/vim-multiple-cursors'    
-call plug#end()
+"call plug#begin('~/.vim/plugged')
+"   Plug 'PotatoesMaster/i3-vim-syntax'
+"   Plug 'terryma/vim-multiple-cursors'    
+"call plug#end()
 
 
 " autocmd StdinReadPre * let s:std_in=1
