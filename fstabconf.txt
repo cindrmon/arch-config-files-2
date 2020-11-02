@@ -2,18 +2,22 @@
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sda6
-UUID=41a4970c-5bbc-4715-bc06-fa8edb4fec70	/         	ext4      	rw,relatime	0 1
 
-# External Hard Drives
+### ArchLinux Boot
 
+## SSD
+# /dev/sdd6
+UUID=38793bfc-9a06-45e8-8688-12662d853440	/         	ext4      	rw,relatime	0 1
 
+# /dev/sdd5
+UUID=A014-66C2      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
 
-UUID=5468002468000786 /home/cindermon/HardDrives/Misc 		ntfs-3g        rw,user,exec,nofail,uid=youruserid,gid=yourgroupid        0 2
-UUID=CED4121ED412097B /home/cindermon/HardDrives/WindowsData 	ntfs-3g        rw,user,exec,nofail,uid=youruserid,gid=yourgroupid        0 2
-UUID=7A52A4DC52A49E7F /home/cindermon/HardDrives/Games 		ntfs-3g        rw,user,exec,nofail,uid=youruserid,gid=yourgroupid        0 2
-UUID=0AEC5110EC50F801 /home/cindermon/HardDrives/Toshiba 	ntfs-3g        rw,user,exec,nofail,uid=youruserid,gid=yourgroupid        0 2
+## HDD (Old Miscellaneous)
+# /dev/sdb2
+UUID=865f01a8-71f6-43c7-b80c-b03d731f4d0d	/home     	ext4      	rw,relatime	0 2
 
-# Network Drives
-client@34.87.155.177:/  /home/cindermon/NetworkDrives/NginxServer  fuse.sshfs  defaults 		  0 0
+# /dev/sdb1
+UUID=3ff8367f-2eb4-4469-a515-2853df5bd2a7	/timeshift	ext4      	rw,relatime	0 2
 
+### External Hard Drives
+UUID=A0AE0798AE0765DE				/home/cinder/Drives/LocalHardDrives/Games	ntfs-3g	rw,user,exec,nofail,uid=1000,gid=998	0 0
