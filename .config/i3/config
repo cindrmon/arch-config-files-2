@@ -370,6 +370,7 @@ exec discord
 # exec firefox
 exec megasync
 exec edex-ui
+exec udiskie -2 &
 
 exec_always pavucontrol
 

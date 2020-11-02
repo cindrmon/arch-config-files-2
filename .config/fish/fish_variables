@@ -47,6 +47,7 @@ SETUVAR _fish_abbr_pacupdateall:sudo\x20pacman\x20\x2dSyyu
 SETUVAR _fish_abbr_pacupdaterepos:sudo\x20pacman\x20\x2dSy
 SETUVAR _fish_abbr_pleasekillme:poweroff
 SETUVAR _fish_abbr_prm:sudo\x20pacman\x20\x2dRc
+SETUVAR _fish_abbr_rcp:sudo\x20rsync\x20\x2davzh\x20\x2d\x2dprogress\x20\x2d\x2dstats
 SETUVAR _fish_abbr_rootme:sudo\x20su
 SETUVAR _fish_abbr_rwxd:chmod\x20777
 SETUVAR _fish_abbr_update_2D_grub:grub\x2dmkconfig\x20\x2do\x20/boot/grub/grub\x2ecfg
