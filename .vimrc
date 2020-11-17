@@ -6,7 +6,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set number relativenumber
-set nowrap
+set wrap
 set smartcase
 " set noswapfile
 " set nobackup
