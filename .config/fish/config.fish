@@ -16,6 +16,7 @@ set -gx PATH $PATH $GOPATH/bin $GOROOT/bin $HOME/Scripts
 # Binary Programs
 set -gx PATH $PATH $HOME/BinaryPrograms/OpenRGB/
 set -gx PATH $PATH $HOME/BinaryPrograms/Gophie/
+set -gx PATH $PATH /var/lib/snapd/snap/bin
 
 ## Custom Fish Greeting
 
