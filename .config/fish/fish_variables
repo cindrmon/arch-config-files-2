@@ -40,9 +40,10 @@ SETUVAR _fish_abbr_grestore:git\x20restore
 SETUVAR _fish_abbr_gstash:git\x20stash
 SETUVAR _fish_abbr_gstat:git\x20status
 SETUVAR _fish_abbr_gsubmodule:git\x20submodule
+SETUVAR _fish_abbr_hugo__push:hugo\x3b\x20rsync\x20\x2de\x20\x27ssh\x20\x2dp\x205813\x27\x20\x2dzhurav\x20public/\x20mon\x40cindermon\x2ecf\x3a/home/sites/cindermon\x2ecf_hugo/
 SETUVAR _fish_abbr_i3config:\x24EDITOR\x20\x7e/\x2econfig/i3/config
 SETUVAR _fish_abbr_p:doas\x20pacman\x20\x2dS
-SETUVAR _fish_abbr_pacquery:doas\x20pacman\x20\x2dQ\x20\x7c\x20grep
+SETUVAR _fish_abbr_pacquery:pacman\x20\x2dQ\x20\x7c\x20grep
 SETUVAR _fish_abbr_pacupdateall:doas\x20pacman\x20\x2dSyyu
 SETUVAR _fish_abbr_pacupdaterepos:doas\x20pacman\x20\x2dSy
 SETUVAR _fish_abbr_pleasekillme:poweroff

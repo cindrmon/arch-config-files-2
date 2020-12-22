@@ -7,6 +7,7 @@ home_dir = os.environ['HOME']
 AvailableFlags = ['loc']
 
 def helpText():
+    print()
     print("Available Commands: ")
     print("printDefLoc - Print current Default Location")
     print("changeDefLoc - Change current Default Location")
@@ -48,10 +49,7 @@ def commandSetter(CommandStream):
         CustomLocation = DefaultLocation
 
     # Sets final flag conditions
-    if(Command == "list"):
-        Flags = f'--list-formats '
-
-    elif(Command == "audio"):
+    if(Command == "audio"):
         Flags = f'-x --audio-format mp3 -o "{CustomLocation}/{Title}" '
     
     elif(Command == "video"):
