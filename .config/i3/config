@@ -369,7 +369,7 @@ set $m1 HDMI-0
 exec discord
 # exec firefox
 exec megasync
-exec edex-ui
+# exec edex-ui
 # exec udiskie -2 &
 
 exec_always pavucontrol
