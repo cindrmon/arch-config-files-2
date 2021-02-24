@@ -26,4 +26,8 @@ set mouse=a
 set wildmode=longest,list,full
 set nocompatible
 filetype plugin indent on
+
 autocmd VimEnter * NERDTree
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
