@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd ~/MEGASync/PROJECTS/PYTHON/JupyterNotebooks
+cd ~/GitRepos/BitBucket/ZenCode/zen-code-python/root/Python\ Notebooks/
 jupyter lab

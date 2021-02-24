@@ -13,7 +13,8 @@ def helpText():
     print("list [URL] - List all available formats")
     print("audio <flags> [URL] - Download Audio Only (mp3)")
     print("video <flags> [URL] - Download Entire Video (mp4)")
-    print("playlist <flags> [Playlist_URL] - Download Entire Playlist (mp4)")
+    print("playlistaudio <flags> [Playlist_URL] - Download Entire Playlist (mp3)")
+    print("playlistvideo <flags> [Playlist_URL] - Download Entire Playlist (mp4)")
     print("bestaudio <flags> [URL] - Download Best Audio (mp3, m4a)")
     print("bestvideo <flags> [URL] - Download Best Video (mp4,mkv, webm)")
     print("help - print this help text for commands")
@@ -63,8 +64,12 @@ def commandSetter(CommandStream):
     elif(Command == "bestvideo"):
         Flags = f'-f bestvideo+bestaudio -o "{CustomLocation}/{Title}" '
 
-    elif(Command == "playlist"):
+    elif(Command == "playlistvideo"):
         Flags = f'-i -f mp4 -o "{CustomLocation}/{Title}" --yes-playlist '
+
+    elif(Command == "playlistaudio"):
+        Flags = f'-i -f bestaudio --extract-audio --audio-format mp3 --audio-quality 160K -o "{CustomLocation}/{Title}" --yes-playlist '
+
 
     # Returns Final Command
     return f'youtube-dl {Flags} {url}'
