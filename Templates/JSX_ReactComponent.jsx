@@ -9,14 +9,14 @@ import React from "react";
 // insert computed values here
 
 // template
-function ReactComponent() {
+function ${FILE}() { // auto-generated using File Templates for VS Code
 
 	return(
-	<div id="reactComponent">
+	<div id="${FILE}">
 		<h1>React Component Output Code</h1>
 	</div>
 	);
 
 }
 
-export default ReactComponent;
+export default ${FILE};

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: "",
+    name: "${FILE}", // auto-generate name using File Templates for VS Code
     data() {
         return {
             // insert vue component local data here
