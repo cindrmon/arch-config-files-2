@@ -1,5 +1,6 @@
-# arch-config-files-2
+# arch-config-files-2 (arch-stow edition)
 updated and more concise arch config files
+uses arch-stow in managing these dotfiles
 
 ## What to backup here?
 
@@ -10,7 +11,5 @@ updated and more concise arch config files
 &nbsp;&nbsp;&nbsp;&nbsp;.fehbg	      		-> feh config file </br>
 &nbsp;&nbsp;&nbsp;&nbsp;.zprofile     		-> for console display managers </br>
 &nbsp;&nbsp;&nbsp;&nbsp;.vimrc        		-> for vim config </br>
-
-### probably gonna symlink them through here for easy access
 
 ## Update: added a wiki for stuff I need to know about Arch
