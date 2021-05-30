@@ -17,10 +17,10 @@ set smartindent
 set number relativenumber
 set wrap
 set smartcase
-" set noswapfile
-" set nobackup
-" set undodir=~/.vim/undodir
-" set undofile
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 set incsearch
 set mouse=a
 set wildmode=longest,list,full
