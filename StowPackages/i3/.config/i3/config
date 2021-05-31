@@ -85,9 +85,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to logout to i3?
 ########################################################################
 
 ####  a. Terminal  ##################################################### 
-bindsym $mod+Return exec cool-retro-term
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec urxvt
+## bindsym $mod+Return exec cool-retro-term
 ## bindsym $mod+Return exec konsole 
-bindsym $mod+Shift+Return exec alacritty
+## bindsym $mod+Shift+Return exec alacritty
 
 ####  b. Explorer  #####################################################
 bindsym $mod+e exec thunar
