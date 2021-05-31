@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd StowPackages;
+stow --simulate -v --restow -t $HOME *;

@@ -2,22 +2,19 @@
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda2
+UUID=4ad0e4c2-9d4e-46cb-b127-f6f19cec2b54	/         	ext4      	rw,relatime	0 1
 
-### ArchLinux Boot
+# /dev/sda1
+UUID=34DD-9940      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
-## SSD
-# /dev/sdd6
-UUID=38793bfc-9a06-45e8-8688-12662d853440	/         	ext4      	rw,relatime	0 1
+# swapfile
+/swapfile		swap		swap		defaults	0 0
 
-# /dev/sdd5
-UUID=A014-66C2      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
-
-## HDD (Old Miscellaneous)
-# /dev/sdb2
+# /dev/sdc2
 UUID=865f01a8-71f6-43c7-b80c-b03d731f4d0d	/home     	ext4      	rw,relatime	0 2
 
-# /dev/sdb1
-UUID=3ff8367f-2eb4-4469-a515-2853df5bd2a7	/timeshift	ext4      	rw,relatime	0 2
-
-### External Hard Drives
-UUID=A0AE0798AE0765DE				/home/cinder/Drives/LocalHardDrives/Games	ntfs-3g	rw,user,exec,nofail,uid=1000,gid=998	0 0
+# /dev/sdd1 (VMs)
+UUID=52d07a1f-ee77-4d78-af2f-45f76fd6a2d0	/home/cinder/Drives/LocalHardDrives/VMs	  ext4	  rw,relatime 0 2
+# /dev/sdd2 (Games)
+UUID=0617CD694A2919B9				/home/cinder/Drives/LocalHardDrives/Games ntfs-3g rw,user,exec,nofail,uid=1000,gid=998,dmask=022,fmask=133 0 0
