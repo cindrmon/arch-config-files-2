@@ -48,6 +48,7 @@ uses arch-stow in managing these dotfiles.
 - scrot -> screenshot manager
 - stow + git -> obviously
 - xrandr + arandr -> enables multi-monitor support and configuration
+- rofi -> application menu
 
 ## Optional Programs
 
